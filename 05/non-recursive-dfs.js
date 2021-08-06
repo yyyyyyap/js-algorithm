@@ -1,5 +1,5 @@
-let tree = require('./testTree')
-// let tree = null
+let trees = require('./testTree')
+let tree = trees.commonTree
 
 // 前序遍历
 function preorder(root) {
@@ -55,7 +55,7 @@ function postorder(root) {
   return res
 }
 
-console.log("先序遍历：")
+console.log("前序遍历：")
 console.log(preorder(tree))
 console.log("中序遍历：")
 console.log(inorder(tree))

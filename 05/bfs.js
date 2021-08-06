@@ -1,4 +1,5 @@
-let tree = require('./testTree')
+let trees = require('./testTree')
+let tree = trees.commonTree
 
 // 最基本的bfs
 function bfs(root) {

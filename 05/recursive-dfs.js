@@ -1,4 +1,5 @@
-let tree = require('./testTree')
+let trees = require('./testTree')
+let tree = trees.commonTree
 
 // 假设树结构为：[1, 2, 7, 3, 5, null, 8, 4, null, null, 6](层序遍历)
 // 则递归序为：1, 2, 3, 4, 4, 4, 3, 3, 2, 5, 5, 6, 6, 6, 5, 2, 1, 7, 7, 8, 8, 8, 7, 1
