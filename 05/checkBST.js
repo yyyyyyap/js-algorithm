@@ -2,6 +2,9 @@ let trees = require('./testTree')
 let commonTree = trees.commonTree
 let searchTree = trees.searchTree
 
+// 搜索二叉树（BST）：每个节点的左子树的值都比节点值小，
+// 右子树的值都比节点值大
+
 // 递归判断输入是不是搜索二叉树
 function checkBST1(root) {
   let prevVal = Number.MIN_VALUE
@@ -45,6 +48,8 @@ function checkBST2(root) {
   }
   return true
 }
+
+// 递归加二叉树套路判断
 
 console.log(checkBST1(commonTree))
 console.log(checkBST1(searchTree))
