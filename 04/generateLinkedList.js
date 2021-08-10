@@ -13,8 +13,18 @@ function generateList(arr) {
   return head
 }
 
+function listTraverse(node) {
+  let res = []
+  while (node) {
+    res.push(node.val)
+    node = node.next
+  }
+  return res
+}
+
 // console.log(generate([1, 2, 3, 4, 5]))
 
 module.exports = {
-  generateList: generateList
+  generateList: generateList,
+  listTraverse: listTraverse
 }

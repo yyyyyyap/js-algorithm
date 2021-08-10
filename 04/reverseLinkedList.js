@@ -1,14 +1,6 @@
 let generate = require('./generatelinkedList')
 let generateList = generate.generateList
-
-function traverse(node) {
-  let res = []
-  while (node) {
-    res.push(node.val)
-    node = node.next
-  }
-  return res
-}
+let listTraverse = generate.listTraverse
 
 // 普通循环解法
 function reverse1(head) {
@@ -34,6 +26,6 @@ function reverse2(head) {
   return newHead
 }
 
-console.log('原始链表：', traverse(generateList([1, 2, 3, 4, 5])))
-console.log('循环反转的链表：',traverse(reverse1(generateList([1, 2, 3, 4, 5]))))
-console.log('递归反转的链表：',traverse(reverse2(generateList([1, 2, 3, 4, 5]))))
+console.log('原始链表：', listTraverse(generateList([1, 2, 3, 4, 5])))
+console.log('循环反转的链表：',listTraverse(reverse1(generateList([1, 2, 3, 4, 5]))))
+console.log('递归反转的链表：',listTraverse(reverse2(generateList([1, 2, 3, 4, 5]))))
