@@ -1,6 +1,6 @@
-let generate = require('./generateLinkedList')
-let generateList = generate.generateList
-let listTraverse = generate.listTraverse
+let listUtil = require('./linkedListUtil')
+let generateList = listUtil.generateList
+let listTraverse = listUtil.listTraverse
 
 // 使用额外空间为O(n)的栈实现
 function checkPaliList1(head) {
@@ -83,6 +83,17 @@ function checkPaliList3(head) {
   return res
 }
 
-console.log(checkPaliList2(generateList([1, 2, 3, 2, 1])))
-console.log(checkPaliList2(generateList([1, 2, 1, 1, 2])))
-console.log(checkPaliList3(generateList([1, 2, 2, 1, 2])))
+
+let testArr1 = [1, 2, 30, 2, 1]
+console.log('testArr1: ', testArr1)
+let generateList1 = generateList(testArr1)
+console.log('1:', checkPaliList1(generateList1))
+console.log('2:', checkPaliList2(generateList1))
+console.log('3:', checkPaliList3(generateList1))
+
+let testArr2 = [1, 2, 30, 2, 2, 1]
+console.log('testArr1: ', testArr2)
+let generateList2 = generateList(testArr2)
+console.log('1:', checkPaliList1(generateList2))
+console.log('2:', checkPaliList2(generateList2))
+console.log('3:', checkPaliList3(generateList2))

@@ -1,6 +1,6 @@
-let generate = require('./generatelinkedList')
-let generateList = generate.generateList
-let listTraverse = generate.listTraverse
+let listutil = require('./linkedListUtil')
+let generateList = listutil.generateList
+let listTraverse = listutil.listTraverse
 
 // 普通循环解法
 function reverse1(head) {
